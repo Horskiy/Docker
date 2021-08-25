@@ -4,19 +4,19 @@ services:
   nginx:
     build: './nginx'
     volumes:
-      - ./nginx-index.html:/var/www/html
-      - ./nginx/default:/etc/nginx/sites-available/default
-      - ./nginx/default:/etc/nginx/sites-enabled/default
+      - ./nginx/nginx-index.html:/var/www/html/nginx-index.html
+      - ./nginx/conf/default:/etc/nginx/sites-available/default
+      - ./nginx/conf/default:/etc/nginx/sites-enabled/default
     ports:
       - 8080:80
       - 443:443
-    depends_on:
-      - php-apache
-
-  php-apache:
-    build: './php'
-    ports:
-      - 8081:8081
-    volumes:
-      - ./conf:/home/public_html
+#    depends_on:
+#      - php-apache
+#
+#  php-apache:
+#    build: './php'
+#    ports:
+#      - 8081:8081
+#    volumes:
+#      - ./php/conf:/home/public_html
     
