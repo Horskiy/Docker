@@ -3,20 +3,21 @@ version: '3'
 services: 
   nginx:
     build: './nginx'
-    volumes:
-      - ./nginx/nginx-index.html:/var/www/html/nginx-index.html
-      - ./nginx/conf/default:/etc/nginx/sites-available/default
-      - ./nginx/conf/default:/etc/nginx/sites-enabled/default
+#    volumes:
+#      - ./nginx/conf:/usr/share
+#      - ./nginx/conf/default:/etc/nginx/sites-available/default
+#      - ./nginx/conf/default:/etc/nginx/sites-enabled/default
+#      - ./nginx/cert:/etc/nginx
     ports:
       - 8080:80
       - 443:443
 #    depends_on:
 #      - php-apache
-#
+
 #  php-apache:
 #    build: './php'
 #    ports:
 #      - 8081:8081
 #    volumes:
 #      - ./php/conf:/home/public_html
-    
+   

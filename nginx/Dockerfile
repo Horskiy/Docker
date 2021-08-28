@@ -1,11 +1,12 @@
 FROM nginx:alpine
 
-COPY ./conf/nginx.conf /usr/share/nginx/nginx.conf
+COPY ./conf/nginx.conf /etc/nginx/nginx.conf
+COPY ./nginx-index.html /var/www/html/nginx-index.html
 COPY ./cert/fullchain.pem /etc/nginx/fullchain.pem
 COPY ./cert/privkey.pem /etc/nginx/privkey.pem
-COPY ./nginx-index.html /usr/share/nginx/html/nginx-index.html
-
-
+#COPY ./nginx-index.html /usr/share/nginx/html/nginx-index.html
+#COPY ./nginx/nginx-index.html /usr/share/nginx/nginx-index.html
+# COPY ./conf/nginx.conf /host/path/nginx/nginx.conf
 
 #RUN mkdir /usr/local/test-log
 #COPY ./test-log/400.log /usr/local/test-log
