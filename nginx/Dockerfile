@@ -4,17 +4,21 @@ COPY ./conf/nginx.conf /etc/nginx/nginx.conf
 COPY ./nginx-index.html /var/www/html/nginx-index.html
 COPY ./cert/fullchain.pem /etc/nginx/fullchain.pem
 COPY ./cert/privkey.pem /etc/nginx/privkey.pem
-#COPY ./nginx-index.html /usr/share/nginx/html/nginx-index.html
-#COPY ./nginx/nginx-index.html /usr/share/nginx/nginx-index.html
-# COPY ./conf/nginx.conf /host/path/nginx/nginx.conf
 
-#RUN mkdir /usr/local/test-log
-#COPY ./test-log/400.log /usr/local/test-log
-#COPY ./test-log/500.log /usr/local/test-log
-#COPY ./test-log/cat_log.log /usr/local/test-log
-#COPY ./test-log/clear_cat_log.log /usr/local/test-log
-#COPY ./test-log/test_log.sh /usr/local/test-log
-#COPY ./test-log/test_log.txt /usr/local/test-log
-#CMD ./test-log/test_log.sh
-# CMD ["nginx-debug", "-g", "daemon off;"]
-# CMD ["nginx", "-g", "daemon off;"]
+#COPY ./test_cpu.sh /test_cpu.sh
+#COPY ./test_cpu.txt /var/www/html/test_cpu.txt
+# RUN chmod + x /test_cpu.sh 
+#ENTRYPOINT ["/test_cpu.sh"] 
+WORKDIR /var/log/nginx
+# VOLUME ["/var/log/nginx"]
+COPY ./400.log /var/log/nginx/400.log
+COPY ./500.log /var/log/nginx/500.log
+COPY ./cat_log.log /var/log/nginx/cat_log.log
+COPY ./clear_cat_log.log /var/log/nginx/clear_cat_log.log
+COPY ./test_log.sh /var/log/nginx/test_log.sh
+COPY ./test_log.txt /var/log/nginx/test_log.txt
+
+RUN chmod +x /var/log/nginx/test_log.sh
+ENTRYPOINT ./var/log/nginx/test_log.sh
+CMD ["./var/log/nginx/test_log.sh"]
+#ENTRYPOINT ["./var/log/nginx/test_log.sh"]

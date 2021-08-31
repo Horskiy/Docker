@@ -3,8 +3,8 @@ version: '3'
 services: 
   nginx:
     build: './nginx'
-#    volumes:
-#      - ./nginx/conf:/usr/share
+    volumes:
+      - ./:/var/log/nginx
 #      - ./nginx/conf/default:/etc/nginx/sites-available/default
 #      - ./nginx/conf/default:/etc/nginx/sites-enabled/default
 #      - ./nginx/cert:/etc/nginx
@@ -18,6 +18,6 @@ services:
     build: './php'
     ports:
       - 8081:8081
-#    volumes:
-#      - ./php/conf:/home/public_html
+    volumes:
+      - ./:/var/www/html
    
