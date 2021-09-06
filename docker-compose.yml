@@ -4,10 +4,13 @@ services:
   nginx:
     build: './nginx'
     volumes:
-      - ./:/var/log/nginx
-#      - ./nginx/conf/default:/etc/nginx/sites-available/default
-#      - ./nginx/conf/default:/etc/nginx/sites-enabled/default
-#      - ./nginx/cert:/etc/nginx
+
+      - ./nginx/test_cpu.txt:/test_cpu.txt
+      - ./nginx/access.log:/var/log/nginx/access.log
+      - ./nginx/error.log:/var/log/nginx/error.log
+     
+
+
     ports:
       - 8080:80
       - 443:443
@@ -19,5 +22,4 @@ services:
     ports:
       - 8081:8081
     volumes:
-      - ./:/var/www/html
-   
+      - ./php/public:/var/www/html
