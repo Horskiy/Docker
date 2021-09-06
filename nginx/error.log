@@ -1,0 +1,23 @@
+400
+erty
+erty
+erty
+wty
+wty
+we
+456
+456
+456
+456
+
+2021/09/05 09:40:43 [error] 32#32: *2 open() "/var/www/html/404.html" failed (2: No such file or directory), client: 37.214.66.102, server: horskiy.hopto.org, request: "GET /music HTTP/1.1", host: "horskiy.hopto.org", referrer: "https://horskiy.hopto.org/"
+2021/09/05 09:49:31 [error] 32#32: *27 open() "/var/www/html/404.html" failed (2: No such file or directory), client: 192.241.219.225, server: horskiy.hopto.org, request: "GET /owa/auth/logon.aspx?url=https%3a%2f%2f1%2fecp%2f HTTP/1.1", host: "3.142.135.233"
+2021/09/05 11:32:24 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/nginx.conf:45
+2021/09/05 11:45:15 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/nginx.conf:45
+2021/09/06 18:32:30 [emerg] 1#1: open() "/etc/nginx/nginx.conf" failed (2: No such file or directory)
+2021/09/06 18:33:58 [emerg] 1#1: open() "/etc/nginx/nginx.conf" failed (2: No such file or directory)
+2021/09/06 18:39:22 [emerg] 1#1: open() "/etc/nginx/nginx.conf" failed (2: No such file or directory)
+2021/09/06 18:42:25 [emerg] 1#1: open() "/etc/nginx/nginx.conf" failed (2: No such file or directory)
+2021/09/06 18:46:38 [error] 32#32: *2 open() "/var/www/html/404.html" failed (2: No such file or directory), client: 37.214.66.102, server: horskiy.hopto.org, request: "GET /favicon.ico HTTP/1.1", host: "horskiy.hopto.org", referrer: "https://horskiy.hopto.org/"
+2021/09/06 19:52:07 [emerg] 1#1: host not found in upstream "playsdev.com" in /etc/nginx/nginx.conf:83
+2021/09/06 20:41:19 [error] 34#34: *59 open() "/var/www/html/404.html" failed (2: No such file or directory), client: 37.214.66.102, server: horskiy.hopto.org, request: "GET /music HTTP/1.1", host: "horskiy.hopto.org", referrer: "https://horskiy.hopto.org/"
