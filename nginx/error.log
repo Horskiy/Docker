@@ -88,3 +88,4 @@ we
 2021/09/08 02:39:23 [crit] 32#32: *759 SSL_do_handshake() failed (SSL: error:141CF06C:SSL routines:tls_parse_ctos_key_share:bad key share) while SSL handshaking, client: 64.62.197.2, server: 0.0.0.0:443
 2021/09/08 05:52:28 [error] 32#32: *784 open() "/var/www/html/404.html" failed (2: No such file or directory), client: 138.246.253.24, server: horskiy.hopto.org, request: "GET /robots.txt HTTP/1.1", host: "3.142.135.233"
 2021/09/08 06:16:46 [error] 32#32: *787 open() "/var/www/html/404.html" failed (2: No such file or directory), client: 20.197.227.185, server: horskiy.hopto.org, request: "GET /.env HTTP/1.1", host: "3.142.135.233"
+2021/09/08 10:11:53 [emerg] 1#1: invalid number of arguments in "root" directive in /etc/nginx/nginx.conf:30

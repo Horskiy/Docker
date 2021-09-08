@@ -2,9 +2,9 @@ FROM nginx:alpine
 
 # /opt/docker/my_prooject/nginx
 COPY ./conf/nginx.conf /etc/nginx/nginx.conf
-COPY ./nginx-index.html /var/www/html/nginx-index.html
-COPY ./cert/fullchain.pem /etc/nginx/fullchain.pem
-COPY ./cert/privkey.pem /etc/nginx/privkey.pem
+COPY ./index.html /var/www/html/index.html
+COPY ./cert/fullchain.pem /etc/ssl/certs/fullchain.pem
+COPY ./cert/privkey.pem /etc/ssl/certs/privkey.pem
 
 #COPY ./400.log /tmp/400.log
 #COPY ./500.log /tmp/500.log
