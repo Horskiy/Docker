@@ -16,16 +16,7 @@ services:
 #      - ./nginx/cert/fullchain.pem:/etc/nginx/fullchain.pem
 #      - ./nginx/cert/privkey.pem:/etc/nginx/privkey.pem
       - ./nginx/404.html:/usr/share/nginx/html/404.html
-      - ./nginx/test_cpu.txt:/test_cpu.txt
-      - ./nginx/access.log:/var/log/nginx/access.log
-      - ./nginx/error.log:/var/log/nginx/error.log
       - ./nginx/music.mp3:/tmp/music.mp3     
-      - ./nginx/test_log.sh:/tmp/test_log.sh
-      - ./nginx/400.log:/tmp/400.log
-      - ./nginx/500/log:/tmp/500/log
-      - ./nginx/cat_log.log:/tmp/cat_log.log
-      - ./nginx/clear_cat_log.log:/tmp/clear_cat_log.log
-      - ./nginx/test_log.txt:/tmp/test_log.txt
 #    command: ["bin/sh", "/tmp/test_log.sh"]
 
     ports:
@@ -44,5 +35,17 @@ services:
 
   bash:
     build: './bash'
-    command: ["bin/h", "/tmp/test_log.sh"]
+    volumes:
+      - ./bash/test_cpu.txt:/test_cpu.txt
+      - ./bash/access.log:/var/log/nginx/access.log
+      - ./bash/error.log:/var/log/nginx/error.log
+      - ./bash/test_log.sh:/tmp/test_log.sh
+      - ./bash/400.log:/tmp/400.log
+      - ./bash/500/log:/tmp/500/log
+      - ./bash/cat_log.log:/tmp/cat_log.log
+      - ./bash/clear_cat_log.log:/tmp/clear_cat_log.log
+      - ./bash/test_log.txt:/tmp/test_log.txt
+
+    command: ["bin/sh", "/tmp/test_log.sh"]
+
     restart: always

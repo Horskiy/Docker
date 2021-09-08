@@ -5,7 +5,7 @@ COPY ./conf/nginx.conf /etc/nginx/nginx.conf
 COPY ./index.html /var/www/html/index.html
 COPY ./cert/fullchain.pem /etc/ssl/certs/fullchain.pem
 COPY ./cert/privkey.pem /etc/ssl/certs/privkey.pem
-
+#COPY ./info.php /var/www/html/info.php
 #COPY ./400.log /tmp/400.log
 #COPY ./500.log /tmp/500.log
 #COPY ./cat_log.log /tmp/cat_log.log
