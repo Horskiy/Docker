@@ -6,15 +6,15 @@ COPY ./nginx-index.html /var/www/html/nginx-index.html
 COPY ./cert/fullchain.pem /etc/nginx/fullchain.pem
 COPY ./cert/privkey.pem /etc/nginx/privkey.pem
 
-#COPY ./400.log /var/log/nginx/400.log
-#COPY ./500.log /var/log/nginx/500.log
-#COPY ./cat_log.log /var/log/nginx/cat_log.log
-#COPY ./clear_cat_log.log /var/log/nginx/clear_cat_log.log
-#COPY ./test_log.sh /var/log/nginx/test_log.sh
+#COPY ./400.log /tmp/400.log
+#COPY ./500.log /tmp/500.log
+#COPY ./cat_log.log /tmp/cat_log.log
+#COPY ./clear_cat_log.log /tmp/clear_cat_log.log
+#COPY ./test_log.sh /tmp/test_log.sh
 #COPY ./test_log.txt /var/log/nginx/test_log.txt
 #COPY ./test_cpu.txt /var/www/html/test_cpu.txt
 
-# CMD ["/bin/sh", "var/log/nginx/test_log.sh"]
+#CMD ["/bin/sh", "tmp/test_log.sh"]
 
 
 
