@@ -431,6 +431,10 @@
 164.90.129.186 - - [08/Sep/2021:14:38:34 +0000] "\x16\x03\x01\x01\xFC\x01\x00\x01\xF8\x03\x038\xE8\xCE\xBC\xED\xC6\xE5\xF4\x11o\xD2\x09y\xF8\xA6o\x81\x13\x12\xE8\x1EI\x94\x1F\xD9" 400 157 "-" "-"
 167.99.63.116 - - [08/Sep/2021:15:30:35 +0000] "GET /tree? HTTP/1.1" 301 169 "-" "Mozilla/5.0 zgrab/0.x"
 167.99.63.116 - - [08/Sep/2021:15:31:02 +0000] "GET /lab? HTTP/1.1" 301 169 "-" "Mozilla/5.0 zgrab/0.x"
+3.142.135.233 - - [14/Sep/2021:21:03:22 +0000] "GET /info.php HTTP/1.0" 200 86809 "https://horskiy.hopto.org/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"
+37.214.71.145 - - [14/Sep/2021:21:03:22 +0000] "GET /php HTTP/1.1" 200 24530 "https://horskiy.hopto.org/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"
+37.214.71.145 - - [14/Sep/2021:21:03:27 +0000] "GET /music HTTP/1.1" 304 0 "https://horskiy.hopto.org/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"
+37.214.71.145 - - [14/Sep/2021:21:03:34 +0000] "GET /anotherserver HTTP/1.1" 200 8501 "https://horskiy.hopto.org/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"
 400
 erty
 erty

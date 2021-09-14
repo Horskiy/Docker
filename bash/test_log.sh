@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# service nginx start
 
 NGINX_LOG=/tmp
 
@@ -10,7 +9,8 @@ do
 SIZE=$(stat -c%s $NGINX_LOG/cat_log.log) #work
 DC=$(date)
 if [[ $SIZE -lt 500000 ]]; then
-	cat /var/log/nginx/access.log /var/log/nginx/error.log > $NGINX_LOG/cat_log.log;
+        cat $NGINX_LOG/access.log $NGINX_LOG/error.log > $NGINX_LOG/cat_log.log;
+#        cat /bash/access.log /bash/error.log > $NGINX_LOG/cat_log.log;
         awk '/4**/' $NGINX_LOG/cat_log.log >>$NGINX_LOG/400.log;
         awk '/5**/' $NGINX_LOG/cat_log.log >>$NGINX_LOG/500.log;
 	else
