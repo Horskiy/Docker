@@ -11,8 +11,8 @@ DC=$(date)
 if [[ $SIZE -lt 500000 ]]; then
         cat $NGINX_LOG/access.log $NGINX_LOG/error.log > $NGINX_LOG/cat_log.log;
 #        cat /bash/access.log /bash/error.log > $NGINX_LOG/cat_log.log;
-        awk '/4**/' $NGINX_LOG/cat_log.log >>$NGINX_LOG/400.log;
-        awk '/5**/' $NGINX_LOG/cat_log.log >>$NGINX_LOG/500.log;
+        awk '/40*/' $NGINX_LOG/cat_log.log >>$NGINX_LOG/400.log;
+        awk '/50*/' $NGINX_LOG/cat_log.log >>$NGINX_LOG/500.log;
 	else
 	cat /dev/null > $NGINX_LOG/cat_log.log
 	echo "Clear file cat_log.txt $DC" >> $NGINX_LOG/clear_cat_log.log;
