@@ -5,20 +5,22 @@ services:
     build: './nginx'
     volumes:
 
-      - ./bash:/var/log/nginx
+      - ./nginx:/var/log/nginx
 #      - ./bash/access.log:/var/log/nginx/access.log
 #      - ./bash/error.log:/var/log/nginx/error.log
       - ./nginx/cert/privkey.pem:/etc/nginx/privkey.pem
       - ./nginx/404.html:/usr/share/nginx/html/404.html
       - ./nginx/music.mp3:/tmp/music.mp3     
+      - ./nginx:/tmp
 
+    command: bin/sh /tmp/test_log.sh
 
     ports:
       - 8080:80
       - 443:443
     depends_on:
       - php
-
+#    restart: always
   php:
     build: './php'
     ports:
@@ -26,16 +28,16 @@ services:
     volumes:
       - ./php/public:/var/www/html
 
-  bash:
-    build: './bash'
-    
-    volumes:
+#  bash:
+#    build: './bash'
+#    
+#    volumes:
 
-      - ./bash/test_cpu.txt:/test_cpu.txt
+#      - ./bash/test_cpu.txt:/test_cpu.txt
 #      - ./bash/access.log:/var/log/nginx/access.log
 #      - ./bash/error.log:/var/log/nginx/error.log
 
-      - ./bash:/tmp
+#      - ./bash:/tmp
 
 #      - ./bash/400.log:/tmp/400.log
 #      - ./bash/500/log:/tmp/500/log
@@ -43,7 +45,7 @@ services:
 #      - ./bash/clear_cat_log.log:/tmp/clear_cat_log.log
 #      - ./bash/test_log.txt:/tmp/test_log.txt
 
-    command: ["bin/sh", "/tmp/test_log.sh"]
+#    command: ["bin/sh", "/tmp/test_log.sh"]
 
-    restart: always
+#    restart: always
   
